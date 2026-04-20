@@ -1,12 +1,262 @@
-* H1, h2, h3, h4, h5, h6, p {
-    color: white;
+/* Сброс отступов и базовые настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Подключение шрифта */
 @font-face {
     font-family: 'My_font';
     src: url('../assets/fonts/OpenSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
+/* Общие стили для body */
 body {
-    font-family: 'My_font', Arial, sans-serif;
+    font-family: 'My_font', 'Arial', sans-serif;
+    background-image: url('../assets/images/Title/Rectangle%201267.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Для более плавного фона */
+    color: white;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* Убираем старый атрибут background из HTML и переносим логику сюда.
+   В HTML body теперь чистый, без атрибута background. */
+
+h1, h2, h3, h4, h5, h6, p {
+    color: white;
+}
+
+/* Контейнер для выравнивания контента */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ----- ШАПКА (Flexbox) ----- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0 48px 0;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.nav-menu ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: opacity 0.2s ease;
+}
+
+.nav-menu a:hover {
+    opacity: 0.8;
+}
+
+.btn-login {
+    padding: 8px 24px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 24px;
+    font-weight: 700;
+}
+
+/* ----- ГЕРОЙ СЕКЦИЯ (Flexbox: разделение по бокам) ----- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex: 1;
+    margin-bottom: 80px;
+}
+
+/* Левая часть с текстом */
+.hero__content {
+    flex: 1;
+    max-width: 550px;
+}
+
+.hero__content h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.hero__description {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 40px;
+    max-width: 480px;
+}
+
+/* Блок с кнопками */
+.hero__buttons {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 14px 40px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: #69E6A6; /* Светло-зеленый акцент */
+    color: #0A2640; /* Темный цвет текста на светлой кнопке */
+    border-color: #69E6A6;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: #69E6A6;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+
+.btn-outline:hover {
+    background-color: white;
+    color: #0A2640;
+}
+
+/* Правая часть с картинкой */
+.hero__image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero__image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.3));
+}
+
+/* ----- ВНИЗУ СЕКЦИЯ Boldo и Presto (Flexbox) ----- */
+.partners {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 0 60px 0;
+    flex-wrap: wrap;
+    gap: 30px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.partner-item {
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.partner-item:hover {
+    opacity: 1;
+}
+
+.partner-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.partner-boldo {
+    color: white;
+}
+
+.partner-presto {
+    color: #B8C5D6; /* Немного другой оттенок для разнообразия */
+}
+
+/* ----- АДАПТИВНОСТЬ (современный подход) ----- */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .nav-menu ul {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero__content {
+        max-width: 100%;
+    }
+
+    .hero__description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero__buttons {
+        justify-content: center;
+    }
+
+    .hero__image {
+        justify-content: center;
+    }
+
+    .hero__content h2 {
+        font-size: 2.2rem;
+    }
+
+    .partners {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-menu ul {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 12px 24px;
+    }
 }

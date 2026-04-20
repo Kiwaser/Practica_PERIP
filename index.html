@@ -2,24 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boldo — Save time building fast</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body background="assets/images/Title/Rectangle%201267.jpg">
-<H1>Boldo</H1>
-<p>Product</p>
-<p>Services</p>
-<p>About</p>
-<p>Log in</p>
-<!-- Логотип boldo и сбоку и текст -->
-<img src="assets/images/Title/hero%20graphics.jpg" alt="Графики">
-<!--Картинка с графиками сбоку чуть ниже текста    -->
-<H2>Save time by building fast with Boldo Template</H2>
-<p>Funding handshake buyer business-to-business metrics iPad partnership. First mover advantage innovator success deployment non-disclosure.</p>
-<!--Текст заголовок слайда и текст-->
+<body>
 
-<!--2 кнопки 1- buy template  2- Explore-->
+<!-- Основной контейнер для ограничения ширины контента по центру -->
+<div class="container">
 
-<!--   Внизу повторяющиеся Boldo и Presto-->
+    <!-- ШАПКА: Логотип boldo и сбоку текст (навигация) -->
+    <header class="header">
+        <div class="logo">
+            <h1>Boldo</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#" class="btn-login">Log in</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ОСНОВНОЙ БЛОК: разделение по бокам с использованием Flexbox -->
+    <main class="hero">
+        <!-- Левая колонка: Текст заголовок слайда и текст -->
+        <div class="hero__content">
+            <h2>Save time by building fast with Boldo Template</h2>
+            <p class="hero__description">
+                Funding handshake buyer business-to-business metrics iPad partnership.
+                First mover advantage innovator success deployment non-disclosure.
+            </p>
+            <!-- 2 кнопки 1- buy template  2- Explore -->
+            <div class="hero__buttons">
+                <button class="btn btn-primary">Buy template</button>
+                <button class="btn btn-outline">Explore</button>
+            </div>
+        </div>
+
+        <!-- Правая колонка: Картинка с графиками сбоку чуть ниже текста -->
+        <div class="hero__image">
+            <img src="assets/images/Title/hero%20graphics.jpg" alt="Analytics and performance graphs">
+        </div>
+    </main>
+
+    <!-- Внизу повторяющиеся Boldo и Presto (секция партнеров/логотипов) -->
+    <section class="partners">
+        <div class="partner-item">
+            <span class="partner-name partner-boldo">Boldo</span>
+        </div>
+        <div class="partner-item">
+            <span class="partner-name partner-presto">Presto</span>
+        </div>
+        <!-- Добавим еще Boldo и Presto для повторения, как указано в комментарии,
+             хотя обычно в футере ставят разные лого. Оставим для точного соответствия ТЗ -->
+        <div class="partner-item">
+            <span class="partner-name partner-boldo">Boldo</span>
+        </div>
+        <div class="partner-item">
+            <span class="partner-name partner-presto">Presto</span>
+        </div>
+    </section>
+
+</div>
 </body>
 </html>
