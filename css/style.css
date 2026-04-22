@@ -1,12 +1,28 @@
-* H1, h2, h3, h4, h5, h6, p {
+@font-face {
+    font-family: 'My_font';
+    src: url('assets/fonts/Manrope.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+.container{
+    display: flex;
+}
+
+
+.section-1{
+    background: #0A2640;
+}
+
+.logo{
+    display: flex;
+    padding-left: 100px;
+}
+
+.logo_text{
+    font-family: 'My_font', serif;
+    font-size: 43.25px;
     color: white;
 }
 
-@font-face {
-    font-family: 'My_font';
-    src: url('../assets/fonts/OpenSans.ttf') format('truetype');
-}
-
-body {
-    font-family: 'My_font', Arial, sans-serif;
-}
