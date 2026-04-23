@@ -23,16 +23,23 @@
 .section-1{
     background: #0A2640;
     display: flex;
+    flex-direction: column; /* Меняем направление на колонку, чтобы текст был под шапкой */
+    width: 100%;
+    padding: 20px 100px 20px 100px; /* Меняем padding: теперь отступы одинаковые слева и справа */
+    box-sizing: border-box;
+}
+
+/* Создаем отдельный контейнер для верхней строки (лого + навигация) */
+.top-bar {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 20px 100px 20px 0;
-    box-sizing: border-box;
 }
 
 .logo{
     display: flex;
-    padding-left: 100px;
+    padding-left: 0; /* Убираем лишний паддинг, так как он есть у section-1 */
 }
 
 .logo_text{
@@ -59,8 +66,105 @@ nav ul {
     color: black;
     padding: 8px 40px;
     border: 2px solid white;
-    border-radius: 24px; /* Делает овальную форму */
+    border-radius: 24px;
     font-size: 16px;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+/* Текстовая секция теперь выравнивается по левому краю, как логотип */
+.text_section_1{
+    color: white;
+    margin-top: 80px; /* Отступ сверху, чтобы текст был ниже шапки */
+    max-width: 600px; /* Ограничиваем ширину для лучшей читаемости (опционально) */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 0; /* Убираем паддинг, так как он есть у section-1 */
+}
+
+.text_main_section_1 {
+    font-family: "Manrope", serif;
+    font-size: 48px; /* Увеличиваем размер для заголовка */
+    line-height: 1.2;
+}
+
+.text_sub_main_section_1 {
+    font-family: "OpenSans", serif;
+    font-size: 16px;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+.buy_template_button{
+    display: flex;
+    background: #69E6A6;
+    max-width: 10%;
+    border-radius: 56px;
+    cursor: pointer;
+    height: 40px;
+    justify-content: center; /* Выравнивание по горизонтали */
+    align-items: center;     /* Выравнивание по вертикали */
+    margin-top: 20px;
+}
+
+.explore_button{
+    color: white;
+    display: flex;
+    background: transparent;
+    max-width: 10%;
+    border-radius: 56px;
+    cursor: pointer;
+    height: 40px;
+    justify-content: center; /* Выравнивание по горизонтали */
+    align-items: center;     /* Выравнивание по вертикали */
+    margin-top: 20px;
+    border: 2px solid white;
+}
+
+.button-container {
+    display: flex;
+    gap: 24px; /* Расстояние между кнопками */
+    margin-top: 20px; /* Отступ сверху переносим сюда с самих кнопок */
+}
+
+.buy_template_button {
+    display: flex;
+    font-family: "OpenSans", serif;
+    font-size: 20px;
+    background: #69E6A6;
+    /* Убираем max-width: 10%; иначе кнопки могут быть слишком узкими для текста */
+    padding: 0 24px; /* Отступы по бокам вместо ширины в процентах */
+    border-radius: 56px;
+    cursor: pointer;
+    height: 40px;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap; /* Чтобы текст не переносился */
+}
+
+.explore_button {
+    font-family: "OpenSans", serif;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    background: transparent;
+    padding: 0 24px;
+    border-radius: 56px;
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    white-space: nowrap;
+}
+
+
+.diagrams{
+    margin-top: -250px;
+    display: flex;
+    margin-left: 1195px;
+    align-self: flex-start;
 }
