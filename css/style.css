@@ -14,13 +14,28 @@ html {
 }
 
 body {
-    font-family: 'My_font', 'Open Sans', Arial, sans-serif;
+    font-family: 'OpenSans', 'My_font', 'Open Sans', Arial, sans-serif;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     background-color: #ffffff;
     color: #1c1c1c;
 }
 
+@font-face {
+    font-family: 'Manrope';
+    src: url('../assets/fonts/Manrope.ttf') format('truetype');
+    font-weight: 400 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../assets/fonts/OpenSans.ttf') format('truetype');
+    font-weight: 400 700;
+    font-display: swap;
+}
+
+/* Резервное имя для совместимости */
 @font-face {
     font-family: 'My_font';
     src: url('../assets/fonts/OpenSans.ttf') format('truetype');
@@ -31,7 +46,8 @@ body {
 /* ----- CUSTOM PROPERTIES ----- */
 :root {
     --color-primary: #0a2647;
-    --color-accent: #65e4a3;
+    --color-primary-alt: #0A2640; /* вариант из второго проекта */
+    --color-accent: #69E6A6;
     --color-dark: #0b1d2f;
     --color-light: #f8f9fc;
     --color-muted: #6c7a89;
@@ -86,6 +102,7 @@ body {
 h1, h2, h3, h4 {
     line-height: 1.2;
     font-weight: 600;
+    font-family: 'Manrope', 'My_font', sans-serif;
 }
 
 a {
@@ -93,21 +110,18 @@ a {
     color: inherit;
 }
 
-/* ----- HEADER / HERO (background image handled via pseudo-element) ----- */
+/* ----- HEADER / HERO (используем сплошной фон как во втором проекте) ----- */
 .hero {
     position: relative;
     isolation: isolate;
     color: var(--color-white);
-    padding-block: 2rem 5rem;
+    padding-block: 1.5rem 5rem;
+    background-color: var(--color-primary-alt); /* #0A2640 */
 }
 
+/* Убираем псевдоэлемент с картинкой, оставляем сплошной цвет */
 .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: url('../assets/images/Title/Rectangle%201267.jpg') center/cover no-repeat;
-    z-index: -1;
-    opacity: 0.95;
+    display: none;
 }
 
 .hero__container {
@@ -122,10 +136,23 @@ a {
     padding-block: 1rem;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo__icon {
+    height: 36px;
+    width: auto;
+}
+
 .logo__text {
-    font-size: 2rem;
+    font-family: 'Manrope', sans-serif;
+    font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: -0.02em;
+    color: var(--color-white);
 }
 
 .nav-menu {
@@ -133,6 +160,7 @@ a {
     gap: 2.5rem;
     align-items: center;
     list-style: none;
+    font-family: 'OpenSans', sans-serif;
 }
 
 .nav-menu a {
@@ -149,6 +177,7 @@ a {
     border: 1.5px solid rgba(255,255,255,0.3);
     border-radius: var(--radius-pill);
     backdrop-filter: blur(4px);
+    background: transparent;
 }
 
 /* Hero grid */
@@ -161,11 +190,13 @@ a {
 }
 
 .hero__title {
+    font-family: 'Manrope', sans-serif;
     font-size: clamp(2.5rem, 5vw, 3.8rem);
     margin-bottom: 1.5rem;
 }
 
 .hero__description {
+    font-family: 'OpenSans', sans-serif;
     font-size: 1.1rem;
     opacity: 0.9;
     max-width: 45ch;
@@ -198,13 +229,15 @@ a {
     align-items: center;
     justify-content: center;
     padding: 0.8rem 2rem;
-    border-radius: var(--radius-pill);
+    border-radius: 56px; /* как во втором проекте */
     font-weight: 600;
     border: none;
     cursor: pointer;
     transition: all 0.2s;
     background: none;
     font-size: 1rem;
+    font-family: 'OpenSans', sans-serif;
+    white-space: nowrap;
 }
 
 .btn--primary {
@@ -475,7 +508,6 @@ a {
     padding: 0 1.5rem 1.5rem;
 }
 
-/* Фикс для аватарок: размеры W32 H32 */
 .blog-card__author img {
     width: 32px;
     height: 32px;
