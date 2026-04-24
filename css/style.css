@@ -145,7 +145,8 @@ a {
     isolation: isolate;
     color: var(--color-white);
     padding-block: 1.5rem 5rem;
-    background-color: var(--color-primary-alt);
+    background: url('../assets/images/Title/Rectangle_1028.png') center/cover no-repeat;
+    background-color: var(--color-primary-alt); /* fallback */
 }
 
 .hero::before {
