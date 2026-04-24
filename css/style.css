@@ -1,6 +1,3 @@
-/* style.css – modern, scalable, accessible, fully responsive */
-
-/* ----- CSS RESET & BASE ----- */
 *,
 *::before,
 *::after {
@@ -46,7 +43,6 @@ input, button, textarea, select {
     font-display: swap;
 }
 
-/* Резервное имя для совместимости */
 @font-face {
     font-family: 'My_font';
     src: url('../assets/fonts/OpenSans.ttf') format('truetype');
@@ -54,7 +50,6 @@ input, button, textarea, select {
     font-display: swap;
 }
 
-/* ----- CUSTOM PROPERTIES ----- */
 :root {
     --color-primary: #0a2647;
     --color-primary-alt: #0A2640;
@@ -77,7 +72,6 @@ input, button, textarea, select {
     --gap-grid: 1.5rem;
 }
 
-/* ----- UTILITY CLASSES ----- */
 .visually-hidden {
     width: 1px;
     height: 1px;
@@ -109,7 +103,6 @@ input, button, textarea, select {
     background-color: var(--color-light);
 }
 
-/* ----- TYPOGRAPHY ----- */
 h1, h2, h3, h4 {
     line-height: 1.2;
     font-weight: 600;
@@ -121,14 +114,13 @@ a {
     color: inherit;
 }
 
-/* ----- HEADER / HERO ----- */
 .hero {
     position: relative;
     isolation: isolate;
     color: var(--color-white);
     padding-block: 1.5rem 5rem;
     background: url('../assets/images/Title/background.jpg') center/cover no-repeat;
-    background-color: var(--color-primary-alt); /* fallback */
+    background-color: var(--color-primary-alt);
     overflow: hidden;
 }
 
@@ -194,7 +186,6 @@ a {
     color: black !important;
 }
 
-/* Hero grid */
 .hero__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -273,7 +264,6 @@ a {
 .fade-heavy { opacity: 0.2; }
 .fade-light { opacity: 0.7; }
 
-/* Buttons */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -328,7 +318,6 @@ a {
     color: white;
 }
 
-/* ----- SERVICES SECTION ----- */
 .section__overline {
     text-align: center;
     color: var(--color-muted);
@@ -390,7 +379,6 @@ a {
     margin-top: auto;
 }
 
-/* Feature connect */
 .feature-connect {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -440,7 +428,6 @@ a {
     flex-shrink: 0;
 }
 
-/* Connect bar */
 .connect-bar {
     display: flex;
     flex-direction: column;
@@ -500,7 +487,6 @@ a {
     border-radius: var(--radius-lg);
 }
 
-/* ----- TESTIMONIALS ----- */
 .testimonials__header {
     display: flex;
     justify-content: space-between;
@@ -559,7 +545,6 @@ a {
     display: block;
 }
 
-/* ----- BLOG SECTION ----- */
 .blog__intro {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -596,13 +581,13 @@ a {
     line-height: 1.3;
 }
 
-.faq-item {
+details.faq-item {
     border-bottom: 1.5px solid var(--color-border);
     padding-block: 1.2rem;
     margin-top: -4%;
 }
 
-.faq-item summary {
+details.faq-item summary {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -612,7 +597,11 @@ a {
     gap: 1rem;
 }
 
-.faq-item summary img {
+details.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+details.faq-item summary img {
     flex-shrink: 0;
 }
 
@@ -658,11 +647,10 @@ a {
 .blog-card h3 {
     padding: 0;
     margin-bottom: 1rem;
-}
-
-.blog-card p {
-    flex: 1;
-    margin-bottom: 1rem;
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 .blog-card__author {
@@ -686,7 +674,6 @@ a {
     margin-top: 3rem;
 }
 
-/* CTA Box */
 .cta-box {
     background: url('../assets/images/Proposition/enterprise_background.jpg') center/cover no-repeat;
     background-color: var(--color-primary-alt);
@@ -734,7 +721,6 @@ a {
     background: #4fd18c;
 }
 
-/* ----- FOOTER ----- */
 .footer {
     padding-block: 4rem;
     border-top: 1px solid var(--color-border);
@@ -772,7 +758,7 @@ a {
     gap: 2rem;
 }
 
-.footer__nav-column h4 {
+.footer__nav-column h3 {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
 }
@@ -812,7 +798,6 @@ a {
     line-height: 1.4;
 }
 
-/* ----- RESPONSIVE ----- */
 @media (max-width: 1100px) {
     .hero__media img {
         transform: scale(1);

@@ -15,7 +15,6 @@
                     <img src="assets/icons/Title/logotype.svg" alt="" class="logo__icon">
                     <span class="logo__text">Boldo</span>
                 </a>
-                <!-- Исправление 1: Убран необязательный role="list" у <ul> -->
                 <ul class="nav-menu">
                     <li><a href="#">Product</a></li>
                     <li><a href="#">Services</a></li>
@@ -72,7 +71,6 @@
     </header>
 
     <main>
-        <!-- Исправление 2: Добавлен заголовок <h2> для секции, чтобы избежать предупреждения "Section lacks heading" -->
         <section class="section services" aria-labelledby="services-heading">
             <div class="container">
                 <h2 id="services-heading" class="visually-hidden">Our Services</h2>
@@ -112,7 +110,6 @@
                     </article>
                 </div>
 
-                <!-- Feature connect block -->
                 <div class="feature-connect">
                     <figure class="feature-connect__media">
                         <img src="assets/images/Handshake/graphic_businessman.jpg" alt="Team collaborating on growth metrics" loading="lazy">
@@ -121,7 +118,6 @@
                         <p class="feature-connect__lead">
                             We connect our customers<br> with the best, and help them <br>keep up-and stay open.
                         </p>
-                        <!-- Исправление 3: Убран необязательный role="list" у <ul> -->
                         <ul class="feature-list">
                             <li class="feature-list__item">
                                 <img src="assets/icons/Handshake/chekmark_blue_background.svg" alt="" aria-hidden="true">
@@ -140,7 +136,6 @@
                     </div>
                 </div>
 
-                <!-- Connect bar -->
                 <div class="connect-bar">
                     <div class="connect-bar__content">
                         <div class="connect-bar__text-group">
@@ -166,7 +161,6 @@
             </div>
         </section>
 
-        <!-- Testimonials / Enterprise Section -->
         <section class="section testimonials bg-primary" aria-labelledby="testimonials-heading">
             <div class="container">
                 <div class="testimonials__header">
@@ -213,7 +207,6 @@
             </div>
         </section>
 
-        <!-- Blog & Connect Section -->
         <section class="section blog bg-light" aria-labelledby="blog-heading">
             <div class="container">
                 <h2 id="blog-heading" class="visually-hidden">Blog and Resources</h2>
@@ -250,14 +243,13 @@
                 </div>
 
                 <div class="card-grid card-grid--blog">
-                    <!-- Исправление 4: Добавлены заголовки <h3> в статьи блога, так как <article> должен содержать заголовок -->
                     <article class="blog-card">
                         <img src="assets/images/Proposition/post_Chandler_Bing.jpg" alt="" loading="lazy">
                         <div class="blog-card__meta">
                             <span class="blog-card__category"><b>Category</b></span>
                             <time datetime="2021-11-22">November 22, 2021</time>
                         </div>
-                        <p>Pitch termsheet backing <br> validation focus release.</p>
+                        <h3>Pitch termsheet backing <br> validation focus release.</h3>
                         <div class="blog-card__author">
                             <img src="assets/icons/Proposition/icon_Chandler_Bing.svg" alt="" loading="lazy" width="32" height="32">
                             <span>Chandler Bing</span>
@@ -270,7 +262,7 @@
                             <span class="blog-card__category"><b>Category</b></span>
                             <time datetime="2021-11-22">November 22, 2021</time>
                         </div>
-                        <p>Seed round direct mailing non- <br> disclosure agreement graphical <br> user interface rockstar.</p>
+                        <h3>Seed round direct mailing non- <br> disclosure agreement graphical <br> user interface rockstar.</h3>
                         <div class="blog-card__author">
                             <img src="assets/icons/Proposition/icon_Rachel_Green.svg" alt="" loading="lazy" width="32" height="32">
                             <span>Rachel Green</span>
@@ -283,7 +275,7 @@
                             <span class="blog-card__category"><b>Category</b></span>
                             <time datetime="2021-11-22">November 22, 2021</time>
                         </div>
-                        <p>Beta prototype sales iPad gen-z <br> marketing network effects value <br> proposition</p>
+                        <h3>Beta prototype sales iPad gen-z <br> marketing network effects value <br> proposition</h3>
                         <div class="blog-card__author">
                             <img src="assets/icons/Proposition/icon_Monica_Geller.svg" alt="" loading="lazy" width="32" height="32">
                             <span>Monica Geller</span>
@@ -295,7 +287,6 @@
                     <button class="btn btn--outline-dark">Load more</button>
                 </div>
 
-                <!-- Enterprise CTA -->
                 <div class="cta-box">
                     <p class="cta-box__text">An enterprise template to ramp <br> up your company website</p>
                     <form class="cta-box__form" action="#" method="post">
@@ -307,7 +298,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container footer__grid">
             <div class="footer__brand">
@@ -318,9 +308,7 @@
 
             <div class="footer__nav">
                 <div class="footer__nav-column">
-                    <!-- Исправление 5: Изменен уровень заголовка с h4 на h3, чтобы соблюсти правильную иерархию (после h2 не может идти h4) -->
                     <h3>Landings</h3>
-                    <!-- Исправление 6: Убраны необязательные role="list" у <ul> -->
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Products</a></li>
