@@ -394,17 +394,37 @@ a {
 
 /* Connect bar */
 .connect-bar {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1.2fr;
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     margin-top: 5rem;
-    align-items: center;
+}
+
+.connect-bar__content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.connect-bar__text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1;
+    margin-top: 100px;
+}
+
+.connect-bar__lead {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0;
 }
 
 .connect-bar__item {
     background: var(--color-white);
     padding: 1.5rem;
-    border-radius: var(--radius-md);
+    border-radius: 4px;
     box-shadow: var(--shadow-sm);
     display: flex;
     align-items: center;
@@ -420,8 +440,14 @@ a {
     width: 28px;
 }
 
+.connect-bar__figure {
+    flex-shrink: 0;
+    max-width: 45%;
+}
+
 .connect-bar__figure img {
     width: 100%;
+    border-radius: var(--radius-lg);
 }
 
 /* ----- TESTIMONIALS ----- */
@@ -679,8 +705,16 @@ a {
 
     .card-grid,
     .testimonials-grid,
-    .connect-bar {
+    .connect-bar__content {
         grid-template-columns: 1fr;
+    }
+
+    .connect-bar__content {
+        flex-direction: column;
+    }
+
+    .connect-bar__figure {
+        max-width: 100%;
     }
 
     .footer__nav {
