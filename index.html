@@ -15,7 +15,8 @@
                     <img src="assets/icons/Title/logotype.svg" alt="" class="logo__icon">
                     <span class="logo__text">Boldo</span>
                 </a>
-                <ul class="nav-menu" role="list">
+                <!-- Исправление 1: Убран необязательный role="list" у <ul> -->
+                <ul class="nav-menu">
                     <li><a href="#">Product</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">About</a></li>
@@ -71,10 +72,11 @@
     </header>
 
     <main>
-        <!-- Services Section (Handshake) -->
-        <section class="section services">
+        <!-- Исправление 2: Добавлен заголовок <h2> для секции, чтобы избежать предупреждения "Section lacks heading" -->
+        <section class="section services" aria-labelledby="services-heading">
             <div class="container">
-                <p class="section__overline">Our Services</p>
+                <h2 id="services-heading" class="visually-hidden">Our Services</h2>
+                <p class="section__overline" aria-hidden="true">Our Services</p>
                 <p class="handshake_text"> Handshake infographic mass market</p>
                 <p class="handshake_text">crowdfunding iteration.</p>
 
@@ -119,7 +121,8 @@
                         <p class="feature-connect__lead">
                             We connect our customers with the best, and help them keep up-and stay open.
                         </p>
-                        <ul class="feature-list" role="list">
+                        <!-- Исправление 3: Убран необязательный role="list" у <ul> -->
+                        <ul class="feature-list">
                             <li class="feature-list__item">
                                 <img src="assets/icons/Handshake/Group%20210.svg" alt="" aria-hidden="true">
                                 <span>We connect our customers with the best.</span>
@@ -164,10 +167,10 @@
         </section>
 
         <!-- Testimonials / Enterprise Section -->
-        <section class="section testimonials bg-primary">
+        <section class="section testimonials bg-primary" aria-labelledby="testimonials-heading">
             <div class="container">
                 <div class="testimonials__header">
-                    <h2 class="testimonials__title">An enterprise template to ramp<br> up your company website</h2>
+                    <h2 id="testimonials-heading" class="testimonials__title">An enterprise template to ramp<br> up your company website</h2>
                     <div class="testimonials__arrows">
                         <img src="assets/icons/Proposition/Arrows.svg" alt="Slide navigation arrows" aria-label="carousel controls">
                     </div>
@@ -211,8 +214,9 @@
         </section>
 
         <!-- Blog & Connect Section -->
-        <section class="section blog bg-light">
+        <section class="section blog bg-light" aria-labelledby="blog-heading">
             <div class="container">
+                <h2 id="blog-heading" class="visually-hidden">Blog and Resources</h2>
                 <div class="blog__intro blog__intro--stacked">
                     <figure class="blog__featured blog__featured--full">
                         <img src="assets/images/Proposition/Image.jpg" alt="Team discussing metrics">
@@ -246,12 +250,14 @@
                 </div>
 
                 <div class="card-grid card-grid--blog">
+                    <!-- Исправление 4: Добавлены заголовки <h3> в статьи блога, так как <article> должен содержать заголовок -->
                     <article class="blog-card">
                         <img src="assets/images/Proposition/Rectangle%201270.jpg" alt="" loading="lazy">
                         <div class="blog-card__meta">
                             <span class="blog-card__category"><b>Category</b></span>
                             <time datetime="2021-11-22">November 22, 2021</time>
                         </div>
+                        <h3 class="blog-card__title">Pitch termsheet backing validation focus release.</h3>
                         <p>Pitch termsheet backing <br> validation focus release.</p>
                         <div class="blog-card__author">
                             <img src="assets/icons/Proposition/Ellipse%2010.svg" alt="" loading="lazy" width="32" height="32">
@@ -265,6 +271,7 @@
                             <span class="blog-card__category"><b>Category</b></span>
                             <time datetime="2021-11-22">November 22, 2021</time>
                         </div>
+                        <h3 class="blog-card__title">Seed round direct mailing non-disclosure agreement graphical user interface rockstar.</h3>
                         <p>Seed round direct mailing non- <br> disclosure agreement graphical <br> user interface rockstar.</p>
                         <div class="blog-card__author">
                             <img src="assets/icons/Proposition/Ellipse%2010%20(1).svg" alt="" loading="lazy" width="32" height="32">
@@ -278,6 +285,7 @@
                             <span class="blog-card__category"><b>Category</b></span>
                             <time datetime="2021-11-22">November 22, 2021</time>
                         </div>
+                        <h3 class="blog-card__title">Beta prototype sales iPad gen-z marketing network effects value proposition</h3>
                         <p>Beta prototype sales iPad gen-z <br> marketing network effects value <br> proposition</p>
                         <div class="blog-card__author">
                             <img src="assets/icons/Proposition/Ellipse%2010%20(2).svg" alt="" loading="lazy" width="32" height="32">
@@ -313,16 +321,18 @@
 
             <div class="footer__nav">
                 <div class="footer__nav-column">
-                    <h4>Landings</h4>
-                    <ul role="list">
+                    <!-- Исправление 5: Изменен уровень заголовка с h4 на h3, чтобы соблюсти правильную иерархию (после h2 не может идти h4) -->
+                    <h3>Landings</h3>
+                    <!-- Исправление 6: Убраны необязательные role="list" у <ul> -->
+                    <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Products</a></li>
                         <li><a href="#">Services</a></li>
                     </ul>
                 </div>
                 <div class="footer__nav-column">
-                    <h4>Company</h4>
-                    <ul role="list">
+                    <h3>Company</h3>
+                    <ul>
                         <li><a href="#">Home</a></li>
                         <li class="footer__hiring">
                             <a href="#">Careers</a>
@@ -332,8 +342,8 @@
                     </ul>
                 </div>
                 <div class="footer__nav-column">
-                    <h4>Resources</h4>
-                    <ul role="list">
+                    <h3>Resources</h3>
+                    <ul>
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">Products</a></li>
                         <li><a href="#">Services</a></li>
