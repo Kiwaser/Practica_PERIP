@@ -460,13 +460,13 @@ a {
 
 .testimonials__title {
     font-size: 2.5rem;
-    max-width: 20ch;
 }
 
 .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    align-items: start; /* Добавьте это для всей сетки */
 }
 
 .testimonial-card {
@@ -477,6 +477,9 @@ a {
     box-shadow: var(--shadow-md);
 }
 
+.testimonial-card:nth-child(2) {
+    padding-bottom: calc(2.5rem + 6px);
+}
 .testimonial-card p {
     font-size: 1.3rem;
     margin-bottom: 2rem;
@@ -503,7 +506,7 @@ a {
 
 .blog__featured img {
     width: 100%;
-    border-radius: var(--radius-lg);
+    border-radius: 24px;
 }
 
 .blog__faq-lead {
