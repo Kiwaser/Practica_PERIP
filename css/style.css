@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    font-family: 'OpenSans', 'My_font', 'Open Sans', Arial, sans-serif;
+    font-family: 'OpenSans', Arial, sans-serif;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     background-color: #ffffff;
@@ -79,7 +79,6 @@ input, button, textarea, select {
 
 /* ----- UTILITY CLASSES ----- */
 .visually-hidden {
-    position: absolute;
     width: 1px;
     height: 1px;
     padding: 0;
@@ -114,7 +113,7 @@ input, button, textarea, select {
 h1, h2, h3, h4 {
     line-height: 1.2;
     font-weight: 600;
-    font-family: 'Manrope', 'My_font', sans-serif;
+    font-family: 'Manrope', sans-serif;
 }
 
 a {
@@ -128,7 +127,7 @@ a {
     isolation: isolate;
     color: var(--color-white);
     padding-block: 1.5rem 5rem;
-    background: url('../assets/images/Title/Rectangle_1028.png') center/cover no-repeat;
+    background: url('../assets/images/Title/background.jpg') center/cover no-repeat;
     background-color: var(--color-primary-alt); /* fallback */
     overflow: hidden;
 }
@@ -188,7 +187,7 @@ a {
 
 .nav-menu__login {
     padding: 0.5rem 2.2rem;
-    border: 1.5px solid rgba(255,255,255,0.3);
+    border: 2px solid rgba(255,255,255,0.3);
     border-radius: var(--radius-pill);
     backdrop-filter: blur(4px);
     background: white;
@@ -220,7 +219,7 @@ a {
     font-family: 'OpenSans', sans-serif;
     opacity: 0.8;
     margin-bottom: 2.5rem;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 .hero__actions {
@@ -365,7 +364,6 @@ a {
     width: 100%;
     height: auto;
     border-radius: var(--radius-md);
-    aspect-ratio: 4/3;
     object-fit: cover;
 }
 
@@ -518,7 +516,7 @@ a {
 }
 
 .testimonials__arrows img {
-    max-width: 80px;
+    max-width: 100%;
 }
 
 .testimonials-grid {
@@ -601,6 +599,7 @@ a {
 .faq-item {
     border-bottom: 1.5px solid var(--color-border);
     padding-block: 1.2rem;
+    margin-top: -4%;
 }
 
 .faq-item summary {
@@ -689,7 +688,7 @@ a {
 
 /* CTA Box */
 .cta-box {
-    background: url('../assets/images/Proposition/enterprise.jpg') center/cover no-repeat;
+    background: url('../assets/images/Proposition/enterprise_background.jpg') center/cover no-repeat;
     background-color: var(--color-primary-alt);
     border-radius: 10px;
     margin-top: 5rem;
@@ -785,6 +784,7 @@ a {
 .footer__nav-column li {
     margin-bottom: 1.5rem;
     color: var(--color-muted);
+    margin-top: 20%;
 }
 
 .footer__nav-column a {
