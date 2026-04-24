@@ -620,6 +620,7 @@ a {
 /* CTA Box */
 .cta-box {
     background: url('../assets/images/Proposition/enterprise.jpg') center/cover no-repeat;
+    border-radius: 10px;
     margin-top: 5rem;
     padding: 4rem;
     text-align: center;
@@ -628,10 +629,8 @@ a {
 .cta-box__text {
     font-size: 2.5rem;
     color: white;
-    max-width: 20ch;
     margin-inline: auto;
     margin-bottom: 2.5rem;
-    font-weight: 600;
 }
 
 .cta-box__form {
@@ -652,7 +651,7 @@ a {
 .btn--accent {
     background: var(--color-accent);
     color: var(--color-primary);
-    padding: 1rem 2.5rem;
+    padding: 1rem 3rem;
     border-radius: 60px;
 }
 
@@ -701,7 +700,7 @@ a {
 }
 
 .footer__nav-column li {
-    margin-bottom: 1rem;
+    margin-bottom: 30px;
     color: var(--color-muted);
 }
 
