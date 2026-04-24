@@ -7,19 +7,21 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<!-- Семантическая обёртка для всей страницы -->
 <div class="page">
+    <!-- Header с навигацией -->
     <header class="hero">
         <div class="container hero__container">
             <nav class="navbar" aria-label="Main navigation">
-                <a class="logo" aria-label="Boldo homepage">
-                    <img src="assets/icons/Title/logotype.svg" alt="" class="logo__icon">
+                <a href="#" class="logo" aria-label="Boldo homepage">
+                    <img src="assets/icons/Title/logotype.svg" alt="" class="logo__icon"">
                     <span class="logo__text">Boldo</span>
                 </a>
                 <ul class="nav-menu" role="list">
-                    <li><a>Product</a></li>
-                    <li><a>Services</a></li>
-                    <li><a>About</a></li>
-                    <li><a class="nav-menu__login">Log in</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#" class="nav-menu__login">Log in</a></li>
                 </ul>
             </nav>
 
@@ -34,80 +36,244 @@
                         <button class="btn btn--primary">Buy template</button>
                         <button class="btn btn--outline">Explore</button>
                     </div>
-
                     <div class="hero__partners">
-                        <div class="logo-row">
-                            <div class="logo-item fade-heavy">
-                                <img src="assets/icons/Title/Logo_Boldo.svg" alt="Boldo">
-                                <span>Boldo</span>
-                            </div>
-                            <div class="logo-item fade-light">
-                                <img src="assets/icons/Title/Logo_Presto.svg" alt="Presto">
-                                <span>Presto</span>
-                            </div>
-                            <div class="logo-item">
-                                <img src="assets/icons/Title/Logo_Boldo.svg" alt="Boldo">
-                                <span>Boldo</span>
-                            </div>
-                            <div class="logo-item">
-                                <img src="assets/icons/Title/Logo_Presto.svg" alt="Presto">
-                                <span>Presto</span>
-                            </div>
-                            <div class="logo-item fade-light">
-                                <img src="assets/icons/Title/Logo_Boldo.svg" alt="Boldo">
-                                <span>Boldo</span>
-                            </div>
-                            <div class="logo-item fade-heavy">
-                                <img src="assets/icons/Title/Logo_Presto.svg" alt="Presto">
-                                <span>Presto</span>
-                            </div>
-                        </div>
+                        <span class="partner">Boldo</span>
+                        <span class="partner">Presto</span>
                     </div>
                 </div>
                 <figure class="hero__media">
-                    <img src="assets/images/Title/Frame%20284.png" alt="Analytics dashboard and growth charts">
+                    <img src="assets/images/Title/Frame%20284.png" alt="Analytics dashboard and growth charts" loading="eager">
                 </figure>
             </div>
         </div>
     </header>
 
     <main>
+        <!-- Services Section (Handshake) -->
         <section class="section services">
             <div class="container">
                 <p class="section__overline">Our Services</p>
+                <h2 class="section__title visually-hidden">Services we provide</h2>
+
                 <div class="card-grid card-grid--three">
                     <article class="service-card">
-                        <img src="assets/images/Handshake/Rectangle%201270%20(3).jpg" alt="" class="service-card__image">
+                        <img src="assets/images/Handshake/Rectangle%201270%20(3).jpg" alt="" class="service-card__image" loading="lazy">
                         <h3 class="service-card__title">Cool feature title</h3>
                         <p class="service-card__text">Learning curve network effects return on investment.</p>
                         <div class="service-card__link">
                             <a href="#">Explore page</a>
-                            <img src="assets/icons/Handshake/arrow-right.svg" alt="">
+                            <img src="assets/icons/Handshake/arrow-right.svg" alt="" aria-hidden="true">
+                            <span class="service-card__underline"></span>
                         </div>
                     </article>
+
                     <article class="service-card">
-                        <img src="assets/images/Handshake/Rectangle%201270%20(1).jpg" alt="" class="service-card__image">
+                        <img src="assets/images/Handshake/Rectangle%201270%20(1).jpg" alt="" class="service-card__image" loading="lazy">
                         <h3 class="service-card__title">Even cooler feature</h3>
                         <p class="service-card__text">Learning curve network effects return on investment.</p>
                         <div class="service-card__link">
                             <a href="#">Explore page</a>
-                            <img src="assets/icons/Handshake/arrow-right.svg" alt="">
+                            <img src="assets/icons/Handshake/arrow-right.svg" alt="" aria-hidden="true">
+                            <span class="service-card__underline"></span>
                         </div>
                     </article>
+
                     <article class="service-card">
-                        <img src="assets/images/Handshake/Rectangle%201270%20(2).jpg" alt="" class="service-card__image">
+                        <img src="assets/images/Handshake/Rectangle%201270%20(2).jpg" alt="" class="service-card__image" loading="lazy">
                         <h3 class="service-card__title">Cool feature title</h3>
                         <p class="service-card__text">Learning curve network effects return on investment.</p>
                         <div class="service-card__link">
                             <a href="#">Explore page</a>
-                            <img src="assets/icons/Handshake/arrow-right.svg" alt="">
+                            <img src="assets/icons/Handshake/arrow-right.svg" alt="" aria-hidden="true">
+                            <span class="service-card__underline"></span>
                         </div>
                     </article>
+                </div>
+
+                <!-- Feature connect block -->
+                <div class="feature-connect">
+                    <figure class="feature-connect__media">
+                        <img src="assets/images/Handshake/Group%20216.jpg" alt="Team collaborating on growth metrics" loading="lazy">
+                    </figure>
+                    <div class="feature-connect__content">
+                        <p class="feature-connect__lead">
+                            We connect our customers with the best, and help them keep up-and stay open.
+                        </p>
+                        <ul class="feature-list" role="list">
+                            <li class="feature-list__item">
+                                <img src="assets/icons/Handshake/Group%20210.svg" alt="" aria-hidden="true">
+                                <span>We connect our customers with the best.</span>
+                            </li>
+                            <li class="feature-list__item">
+                                <img src="assets/icons/Handshake/Group%20210.svg" alt="" aria-hidden="true">
+                                <span>Advisor success customer launch party.</span>
+                            </li>
+                            <li class="feature-list__item">
+                                <img src="assets/icons/Handshake/Group%20210.svg" alt="" aria-hidden="true">
+                                <span>Business-to-consumer long tail.</span>
+                            </li>
+                        </ul>
+                        <button class="btn btn--dark">Start now</button>
+                    </div>
+                </div>
+
+                <!-- Connect bar (three panels) -->
+                <div class="connect-bar">
+                    <div class="connect-bar__item connect-bar__item--dark">
+                        <img src="assets/icons/Handshake/star.svg" alt="" aria-hidden="true" class="connect-bar__icon">
+                        <p>We connect our customers with the best.</p>
+                    </div>
+                    <div class="connect-bar__item">
+                        <img src="assets/icons/Handshake/star%20(1).svg" alt="" aria-hidden="true" class="connect-bar__icon">
+                        <p>Advisor success customer launch party.</p>
+                    </div>
+                    <div class="connect-bar__item">
+                        <img src="assets/icons/Handshake/sun.svg" alt="" aria-hidden="true" class="connect-bar__icon">
+                        <p>Business-to-consumer long tail.</p>
+                    </div>
+                    <figure class="connect-bar__figure">
+                        <img src="assets/images/Handshake/Group%20281.jpg" alt="Dashboard preview" loading="lazy">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials / Enterprise Section -->
+        <section class="section testimonials bg-primary">
+            <div class="container">
+                <div class="testimonials__header">
+                    <h2 class="testimonials__title">An enterprise template to ramp up your company website</h2>
+                    <div class="testimonials__arrows">
+                        <img src="assets/icons/Proposition/Arrows.svg" alt="Slide navigation arrows" aria-label="carousel controls">
+                    </div>
+                </div>
+
+                <div class="testimonials-grid">
+                    <blockquote class="testimonial-card">
+                        <p>“Buyer buzz partner network disruptive non-disclosure agreement business”</p>
+                        <footer>
+                            <img src="assets/icons/Proposition/Ellipse%204.svg" alt="" loading="lazy">
+                            <div>
+                                <cite><b>Albus Dumbledore</b></cite>
+                                <span>Manager @ Howarts</span>
+                            </div>
+                        </footer>
+                    </blockquote>
+
+                    <blockquote class="testimonial-card">
+                        <p>“Learning curve infrastructure value proposition advisor strategy user experience hypotheses investor.”</p>
+                        <footer>
+                            <img src="assets/icons/Proposition/Ellipse%204%20(1).svg" alt="" loading="lazy">
+                            <div>
+                                <cite><b>Severus Snape</b></cite>
+                                <span>Manager @ Slytherin</span>
+                            </div>
+                        </footer>
+                    </blockquote>
+
+                    <blockquote class="testimonial-card">
+                        <p>“Release facebook responsive web design business model canvas seed money monetization.”</p>
+                        <footer>
+                            <img src="assets/icons/Proposition/Ellipse%204%20(2).svg" alt="" loading="lazy">
+                            <div>
+                                <cite><b>Harry Potter</b></cite>
+                                <span>Team Leader @ Gryffindor</span>
+                            </div>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog & Connect Section -->
+        <section class="section blog bg-light">
+            <div class="container">
+                <div class="blog__intro">
+                    <figure class="blog__featured">
+                        <img src="assets/images/Proposition/Image.jpg" alt="Team discussing metrics" loading="lazy">
+                    </figure>
+                    <div class="blog__faq">
+                        <p class="blog__faq-lead">We connect our customers with the best, and help them keep up-and stay open.</p>
+                        <details class="faq-item">
+                            <summary>
+                                <span>We connect our customers with the best?</span>
+                                <img src="assets/icons/Proposition/Group%20210.svg" alt="" aria-hidden="true">
+                            </summary>
+                            <p>Detailed answer about customer connection strategy.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>
+                                <span>Android research & development rockstar?</span>
+                                <img src="assets/icons/Proposition/Group%20210.svg" alt="" aria-hidden="true">
+                            </summary>
+                            <p>Information about Android R&D team and opportunities.</p>
+                        </details>
+                    </div>
+                </div>
+
+                <div class="blog__header">
+                    <p class="section__overline">Our Blog</p>
+                    <h2 class="section__title">Value proposition accelerator product management venture</h2>
+                </div>
+
+                <div class="card-grid card-grid--blog">
+                    <article class="blog-card">
+                        <img src="assets/images/Proposition/Rectangle%201270.jpg" alt="" loading="lazy">
+                        <div class="blog-card__meta">
+                            <span class="blog-card__category"><b>Category</b></span>
+                            <time datetime="2021-11-22">November 22, 2021</time>
+                        </div>
+                        <h3>Pitch termsheet backing validation focus release.</h3>
+                        <div class="blog-card__author">
+                            <img src="assets/icons/Proposition/Ellipse%2010.svg" alt="" loading="lazy" width="32" height="32">
+                            <span>Chandler Bing</span>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <img src="assets/images/Proposition/Rectangle%201270%20(4).jpg" alt="" loading="lazy">
+                        <div class="blog-card__meta">
+                            <span class="blog-card__category"><b>Category</b></span>
+                            <time datetime="2021-11-22">November 22, 2021</time>
+                        </div>
+                        <h3>Seed round direct mailing non-disclosure agreement graphical user interface rockstar.</h3>
+                        <div class="blog-card__author">
+                            <img src="assets/icons/Proposition/Ellipse%2010%20(1).svg" alt="" loading="lazy" width="32" height="32">
+                            <span>Rachel Green</span>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <img src="assets/images/Proposition/Rectangle%201270%20(5).jpg" alt="" loading="lazy">
+                        <div class="blog-card__meta">
+                            <span class="blog-card__category"><b>Category</b></span>
+                            <time datetime="2021-11-22">November 22, 2021</time>
+                        </div>
+                        <h3>Beta prototype sales iPad gen-z marketing network effects value proposition</h3>
+                        <div class="blog-card__author">
+                            <img src="assets/icons/Proposition/Ellipse%2010%20(2).svg" alt="" loading="lazy" width="32" height="32">
+                            <span>Monica Geller</span>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="blog__load-more">
+                    <button class="btn btn--outline-dark">Load more</button>
+                </div>
+
+                <!-- Enterprise CTA -->
+                <div class="cta-box">
+                    <p class="cta-box__text">An enterprise template to ramp up your company website</p>
+                    <form class="cta-box__form" action="#" method="post">
+                        <input type="email" placeholder="Your email address" aria-label="Email address" required>
+                        <button type="submit" class="btn btn--accent">Start now</button>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container footer__grid">
             <div class="footer__brand">
@@ -115,6 +281,7 @@
                 <p class="footer__description">Social media validation business model canvas graphical user interface launch party creative facebook iPad twitter.</p>
                 <p class="footer__copyright">All rights reserved.</p>
             </div>
+
             <div class="footer__nav">
                 <div class="footer__nav-column">
                     <h4>Landings</h4>
@@ -128,13 +295,19 @@
                     <h4>Company</h4>
                     <ul role="list">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Careers</a></li>
+                        <li class="footer__hiring">
+                            <a href="#">Careers</a>
+                            <span class="badge">Hiring!</span>
+                        </li>
+                        <li><a href="#">Services</a></li>
                     </ul>
                 </div>
                 <div class="footer__nav-column">
                     <h4>Resources</h4>
                     <ul role="list">
                         <li><a href="#">Blog</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Services</a></li>
                     </ul>
                 </div>
             </div>
